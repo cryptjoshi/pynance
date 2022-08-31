@@ -23,6 +23,15 @@ print(colored.green('Facebook: Srang Srrkh'))
 print(colored.green('https://www.facebook.com/SrangSrrkh'))
 
 def Config_Time(times):
+    # try:
+    # ###put for example buy code here###
+
+    # except Exception as e:
+    #     print(e)
+    #     substring = 'Timestamp for this request was 1000ms ahead of the server'
+    #     if substring in e.message:
+    #         os.system('w32tm/resync')
+            
     return time.strftime ("%x",times)
     
 
@@ -400,7 +409,7 @@ def Main():
                     side='BUY',
                     quantity=quantity)
             
-             if SidePosition['dualSidePosition'] == True:
+            if SidePosition['dualSidePosition'] == True:
                 client.futures_change_leverage(symbol=symbol,leverage=leverage)
                 order = client.futures_create_order(
                     symbol=symbol,

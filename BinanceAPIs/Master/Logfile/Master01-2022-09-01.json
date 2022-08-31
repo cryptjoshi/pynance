@@ -1,0 +1,24 @@
+[
+    {
+        "date and time": "01/09/2022 01:19:48",
+        "User": "Master01",
+        "Msg": "RUN BOT ..."
+    },
+    {
+        "date and time": "01/09/2022 01:47:43",
+        "User": "Master01",
+        "Balance_API Status:": "Invalid"
+    },
+    {
+        "date and time": "01/09/2022 01:50:42",
+        "User": "Master01",
+        "Balance_Furture USDT": "0.0",
+        "Balance_API Status": "Normal"
+    },
+    {
+        "date and time": "01/09/2022 01:58:04",
+        "User": "Master01",
+        "Balance_Furture USDT": "0.0",
+        "Balance_API Status": "Normal"
+    }
+]
