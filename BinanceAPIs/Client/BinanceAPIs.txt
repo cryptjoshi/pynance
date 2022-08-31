@@ -1,0 +1,14 @@
+User Client01
+token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Amount 0
+leverage 0
+api_key xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+api_secret xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+User Client02
+token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Amount 5%
+leverage 15
+api_key xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+api_secret xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
