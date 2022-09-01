@@ -12,11 +12,6 @@ from datetime import datetime
 import ntplib
 from time import ctime
 
-print(colored.green('---------------------'))
-print(colored.green('welcome to Binance_Futures_v_users_2.8'))
-print(colored.green('by Meew Punk'))
-print(colored.green('Facebook: Srang Srrkh'))
-print(colored.green('https://www.facebook.com/SrangSrrkh'))
 
 
 def RunAsAdmin(path_to_file,*args):

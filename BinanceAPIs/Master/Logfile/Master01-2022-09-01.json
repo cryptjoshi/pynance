@@ -26,5 +26,21 @@
         "User": "Master01",
         "Balance_Furture USDT": "0.0",
         "Balance_API Status": "Normal"
+    },
+    {
+        "date and time": "01/09/2022 12:57:06",
+        "User": "Master01",
+        "Balance_Furture USDT": "0.0",
+        "Balance_API Status": "Normal"
+    },
+    {
+        "date and time": "01/09/2022 17:03:41",
+        "User": "Master01",
+        "Msg": "Initial Trading config"
+    },
+    {
+        "date and time": "01/09/2022 17:30:11",
+        "User": "Master01",
+        "Message": "Initial Trading config"
     }
 ]
