@@ -22,9 +22,9 @@ app = Flask(__name__)
 
 try:
     headers = {'content-type': 'application/json'}
-    req = requests.post(url=url,data=json.dumps(data),headers=headers)
-
-    if req.text == 'Invalid':
+    res = requests.post(url=url,data=json.dumps(data),headers=headers)
+   
+    if res.text == 'Invalid':
         red('***********************')
         red('****** Register *******')
         red('***********************')
@@ -32,13 +32,14 @@ try:
         quit()
     else:
         green('***********************')
-        data = req.json()
+        data = res.json()
         green(data['msg'])
         green('Welcome '+data['username'])
         green('***********************')
 
-except:
+except Exception as e:
     red('****** Login not Success ******')
+    red(e)
     quit()
 
 @app.route('/',methods=['get'])
