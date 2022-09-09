@@ -1,0 +1,11 @@
+{
+  "main": {
+    "js": "/public/main.js"
+  },
+  "polyfills": {
+    "js": "/public/polyfills.chunk.js"
+  },
+  "vendor": {
+    "js": "/public/vendor.js"
+  }
+}
