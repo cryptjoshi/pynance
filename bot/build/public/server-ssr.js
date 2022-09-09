@@ -1882,6 +1882,10 @@ var _ErrorPage = _interopRequireDefault(__webpack_require__("./src/routes/error/
 
 var _universalRouter = _interopRequireDefault(__webpack_require__("universal-router"));
 
+var _jsonwebtoken = _interopRequireDefault(__webpack_require__("jsonwebtoken"));
+
+var _dist = __webpack_require__("express-jwt/dist");
+
 var _crossFetch = _interopRequireDefault(__webpack_require__("cross-fetch"));
 
 var _App = _interopRequireDefault(__webpack_require__("./src/components/App.js"));
@@ -1934,6 +1938,20 @@ app.use(_bodyParser["default"].urlencoded({
   extended: true
 }));
 app.use(_bodyParser["default"].json());
+app.use((0, _dist.expressjwt)({
+  secret: _config.auth.jwt.secret,
+  algorithms: ["HS256"],
+  credentialsRequired: false,
+  getToken: function getToken(req) {
+    return req.cookies.id_token;
+  }
+}));
+app.use(function (err, req, res, next) {
+  if (err.name === "UnauthorizedError") {
+    res.clearCookie("id_token");
+    res.status(401).redirect("/");
+  }
+});
 
 if (true) {
   app.enable("trust proxy");
@@ -2044,6 +2062,8 @@ app.get("*", /*#__PURE__*/function () {
 
             if (!req.user) {
               collectionArray && collectionArray.length > 0 && collectionArray.map(function (value, index) {
+                console.log(req.url, currentLocation.includes(value));
+
                 if (currentLocation.includes(value)) {
                   if (req.url) {
                     res.redirect("/login?refer=" + currentLocation);
@@ -2070,6 +2090,7 @@ app.get("*", /*#__PURE__*/function () {
               id: "css",
               cssText: [].concat(css).join("")
             }];
+            data.state = context.store.getState();
             data.scripts = [_assets["default"].vendor.js];
 
             if (route.chunks) {
@@ -2079,7 +2100,7 @@ app.get("*", /*#__PURE__*/function () {
             }
 
             data.scripts.push(_assets["default"].main.js);
-            _context2.next = 26;
+            _context2.next = 27;
             return (0, _ssr.renderToStringWithData)( /* @__PURE__ */_react["default"].createElement(_StyleContext["default"].Provider, {
               value: {
                 insertCss: insertCss
@@ -2088,25 +2109,25 @@ app.get("*", /*#__PURE__*/function () {
               context: context
             }, route.component)));
 
-          case 26:
+          case 27:
             data.children = _context2.sent;
             html = _server["default"].renderToStaticMarkup( /* @__PURE__ */_react["default"].createElement(_Html["default"], _extends({}, data)));
             res.status(route.status || 200);
             res.send("<!doctype html>" + html);
-            _context2.next = 35;
+            _context2.next = 36;
             break;
 
-          case 32:
-            _context2.prev = 32;
+          case 33:
+            _context2.prev = 33;
             _context2.t0 = _context2["catch"](0);
             next(_context2.t0);
 
-          case 35:
+          case 36:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[0, 32]]);
+    }, _callee2, null, [[0, 33]]);
   }));
 
   return function (_x4, _x5, _x6) {
@@ -2803,6 +2824,14 @@ module.exports = require("express-graphql");
 
 /***/ }),
 
+/***/ "express-jwt/dist":
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("express-jwt/dist");
+
+/***/ }),
+
 /***/ "express-static-gzip":
 /***/ ((module) => {
 
@@ -2848,6 +2877,14 @@ module.exports = require("isomorphic-style-loader/useStyles");
 
 "use strict";
 module.exports = require("isomorphic-style-loader/withStyles");
+
+/***/ }),
+
+/***/ "jsonwebtoken":
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("jsonwebtoken");
 
 /***/ }),
 

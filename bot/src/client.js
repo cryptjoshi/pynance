@@ -8,8 +8,10 @@ import history from './core/history';
 import StyleContext from 'isomorphic-style-loader/StyleContext';
 import { updateMeta } from './core/DOMUtils';
 import { ErrorReporter, deepForceUpdate } from './core/devUtils';
-
-const store = {}
+import createApolloClient from './core/createApolloClient';
+import configuresStore from "./store/configStore";
+const apolloClient = createApolloClient();
+const store = configuresStore(window.APP_STATE, { history, apolloClient });
 const css = new Set()
 const insertCss = (...styles) => {
   // eslint-disable-next-line no-underscore-dangle
@@ -25,7 +27,7 @@ const context = {
       return () => { removeCss.forEach(f => f()); };
     },
     // For react-apollo
-    client: {},
+    client: apolloClient,
     // Initialize a new Redux store
     // http://redux.js.org/docs/basics/UsageWithReact.html
     store,

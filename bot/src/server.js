@@ -1,5 +1,5 @@
 import express from 'express';
-import {port,locales} from './config';
+import {port,locales,auth} from './config';
 import routes from "./routes"
 import path from 'path'
 
@@ -9,6 +9,9 @@ import bodyParser from 'body-parser'
 import PrettyError from 'pretty-error';
 import errorPageStyle from './routes/error/ErrorPage.css';
 import UniversalRouter from 'universal-router'
+import jwt from 'jsonwebtoken';
+import { expressjwt } from 'express-jwt/dist';
+// import expressGraphQL from 'express-graphql';
 import fetch from 'cross-fetch';
 import App from './components/App'
 import Html from './components/Html';
@@ -55,6 +58,24 @@ app.use(cookieParser());
 // }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// auth
+// ----------------------------------------------------------------
+
+app.use(expressjwt({
+  secret: auth.jwt.secret,
+  algorithms: ["HS256"],
+  credentialsRequired: false,
+  getToken: req => req.cookies.id_token,
+}));
+app.use(function (err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res.clearCookie('id_token');
+    res.status(401).redirect('/');
+  }
+});
+
+
 
 if (__DEV__) {
   app.enable('trust proxy');
@@ -146,6 +167,7 @@ app.get('/favicon.ico', function(req, res) {
        
         if (!req.user) {
           collectionArray && collectionArray.length > 0 && collectionArray.map((value, index) => {
+            console.log(req.url,currentLocation.includes(value))
             if (currentLocation.includes(value)) {
               if (req.url) {
                 res.redirect("/login?refer=" + currentLocation);
@@ -169,6 +191,7 @@ app.get('/favicon.ico', function(req, res) {
         data.styles = [
             { id: 'css', cssText: [...css].join('') },
           ];
+          data.state = context.store.getState();
            data.scripts = [
          assets.vendor.js
            ];

@@ -103,12 +103,12 @@ const config = {
               name: isDebug?'[path][name].[ext]?[hash:8]' : '[hash:8].[ext]',
           }
       },
-      // {
-      //   test: /\.m?js$/,
-      //   resolve: {
-      //     fullySpecified: false,
-      //   },
-      // },
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
     ]   
   },
   output: {
