@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  authen_server:
+    container_name: authen
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - /backend/.:/app
+    ports:
+      - 3000:3000
+    networks:
+      - rentall_db_network
+      - default
+    external_links:
+      - db:db
+  
+  tradingview:
+    container_name: tradingview
+    build:
+      context: ./tradingview
+    networks:
+      - default
+      - rentall_db_network
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      # https://docs.python.org/3/howto/logging.html#logging-levels
+      - TRADINGVIEW_LOG_LEVEL=INFO
+    ports:
+      - 8082:8080
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '50m'
+
+networks:
+    default: # this network (app1)
+        driver: bridge
+    rentall_db_network: # external network (app2)
+        external: true

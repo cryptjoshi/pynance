@@ -39,6 +39,7 @@ try:
 
 except Exception as e:
     red('****** Login not Success ******')
+    red('****** Server Authen error ******')
     red(e)
     quit()
 

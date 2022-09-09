@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt')
 const cors = require('cors')
 const db = mysql.createPool({
     connectionLimit:100,
-    host:'localhost',
+    host:'db',
     user:'root',
     password:'1234',
     database: 'pynance',
