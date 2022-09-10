@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from 'prop-types'
 import withStyles from "isomorphic-style-loader/withStyles";
 import s from './Layout.css'
-
+import Header from '../Header'
+import Footer from '../Footer'
 import cx from 'classnames'
 
 class Layout extends React.Component {
@@ -12,9 +13,10 @@ class Layout extends React.Component {
     render() {
         return (
             <div>
+                <Header />
                 {this.props.children}
                 <div className={cx('hidden-xs hidden-sm')}>
-                    <h1>Footer</h1>
+                  <Footer />
                 </div>
             </div>
         )

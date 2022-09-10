@@ -1,5 +1,6 @@
 import React from "react"
 import Home from  '../../components/Home'
+import Layout from "../../components/Layout/Layout"
 export default {
     path: '/',
     async action({store}){
@@ -10,7 +11,7 @@ export default {
             title,
             description,
             chunk: 'home',
-            component: <Home />
+            component: <Layout><Home /></Layout>
         }
     }
 }
