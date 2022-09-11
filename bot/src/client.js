@@ -47,12 +47,13 @@ async function onLocationChange(location,action){
     scrollX: window.pageXOffset,
     scrollY: window.pageYOffset,
   }
-  if(action == 'PUSH'){
+  
+  if(action === 'PUSH'){
     delete scrollPositionsHistory[location.key];
   }
   currentLocation = location;
   const isInitialRender = !action;
-
+ 
   try {
     const router = new UniversalRouter(routes,{context})
     const route = await router.resolve({
@@ -133,6 +134,7 @@ async function onLocationChange(location,action){
 
 const main = ()=>{
     try {
+      
         history.listen(onLocationChange);
         onLocationChange(currentLocation);
         
@@ -169,7 +171,7 @@ const main = ()=>{
                 ReactDOM.render(<ErrorReporter error={error} />, container);
                }
             }
-        
+          
             await onLocationChange(currentLocation);
           });
       }

@@ -3,7 +3,8 @@ export default {
     path: '/',
     children: [
         require('./home').default,
-        require('./login').default
+        require('./login').default,
+        require('./static/help').default
     ],
     action: async ({next})=>{
         const route = await next();

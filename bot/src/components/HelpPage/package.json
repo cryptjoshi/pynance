@@ -1,0 +1,7 @@
+{
+    "name": "HelpPage",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./HelpPage.js"
+  }
+  

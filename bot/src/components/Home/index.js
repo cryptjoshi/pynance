@@ -11,9 +11,11 @@ const Home = () => {
      <div className={s.title}>
      <h1>Home Components</h1>
      <p>-----------------</p>
-     <p>Hello BrowserSync</p>
+     <p>Live on BrowserSync</p>
      <p>-----------------</p>
-     <Link to={"/login"}>Login</Link>
+     <p>Live on BrowserSync</p>
+     <p>-----------------</p>
+ 
 
 
 

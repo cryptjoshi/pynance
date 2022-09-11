@@ -147,8 +147,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Footer extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Footer");
+    return /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: (_footer_css__WEBPACK_IMPORTED_MODULE_2___default().footer)
+    }, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Footer"));
   }
 
 }
@@ -167,10 +173,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("isomorphic-style-loader/withStyles");
-/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./src/components/Header/header.css");
-/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_header_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Link_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/components/Link/Link.js");
+/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("isomorphic-style-loader/withStyles");
+/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/components/Header/header.css");
+/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_header_css__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -182,13 +190,15 @@ class Header extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
 
   render() {
     return /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: (_header_css__WEBPACK_IMPORTED_MODULE_2___default().header)
-    }, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Header"));
+      className: (_header_css__WEBPACK_IMPORTED_MODULE_3___default().header)
+    }, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Header"), /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Link_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      to: "help"
+    }, "Help")));
   }
 
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_1___default()((_header_css__WEBPACK_IMPORTED_MODULE_2___default()))(Header));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2___default()((_header_css__WEBPACK_IMPORTED_MODULE_3___default()))(Header));
 
 /***/ }),
 
@@ -220,9 +230,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var Home = function Home() {
   return /* @__PURE__ */_react["default"].createElement("div", {
     className: _home["default"].title
-  }, /* @__PURE__ */_react["default"].createElement("h1", null, "Home Components"), /* @__PURE__ */_react["default"].createElement("p", null, "-----------------"), /* @__PURE__ */_react["default"].createElement("p", null, "Hello BrowserSync"), /* @__PURE__ */_react["default"].createElement("p", null, "-----------------"), /* @__PURE__ */_react["default"].createElement(_Link["default"], {
-    to: "/login"
-  }, "Login"));
+  }, /* @__PURE__ */_react["default"].createElement("h1", null, "Home Components"), /* @__PURE__ */_react["default"].createElement("p", null, "-----------------"), /* @__PURE__ */_react["default"].createElement("p", null, "Live on BrowserSync"), /* @__PURE__ */_react["default"].createElement("p", null, "-----------------"), /* @__PURE__ */_react["default"].createElement("p", null, "Live on BrowserSync"), /* @__PURE__ */_react["default"].createElement("p", null, "-----------------"));
 };
 
 var _default = (0, _withStyles["default"])(_home["default"])(Home);
@@ -565,6 +573,71 @@ const LoginForm = () => {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_0___default()((_Login_css__WEBPACK_IMPORTED_MODULE_2___default()))(LoginForm));
+
+/***/ }),
+
+/***/ "./src/components/Page/index.js":
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("isomorphic-style-loader/withStyles");
+/* harmony import */ var isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Page_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/components/Page/Page.css");
+/* harmony import */ var _Page_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Page_css__WEBPACK_IMPORTED_MODULE_3__);
+var __defProp = Object.defineProperty;
+
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, {
+  enumerable: true,
+  configurable: true,
+  writable: true,
+  value
+}) : obj[key] = value;
+
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+
+  return value;
+};
+
+
+
+
+
+
+class Page extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
+  render() {
+    const {
+      title,
+      html
+    } = this.props;
+    let addClass = "ql-editor frontend";
+    return /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: (_Page_css__WEBPACK_IMPORTED_MODULE_3___default().root)
+    }, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "s.container"
+    }, /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, title), /* @__PURE__ */react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: addClass
+    }, "dangerouslySetInnerHTML=", {
+      __html: html
+    })));
+  }
+
+}
+
+__publicField(Page, "propTypes", {
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  html: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
+});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (isomorphic_style_loader_withStyles__WEBPACK_IMPORTED_MODULE_2___default()((_Page_css__WEBPACK_IMPORTED_MODULE_3___default()))(Page));
 
 /***/ }),
 
@@ -1429,6 +1502,48 @@ exports.IMAGE_LOADER1_SUCCESS = IMAGE_LOADER1_SUCCESS;
 
 /***/ }),
 
+/***/ "./src/core/fetch/fetch.server.js":
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Headers": () => (/* reexport safe */ node_fetch__WEBPACK_IMPORTED_MODULE_1__.Headers),
+/* harmony export */   "Request": () => (/* reexport safe */ node_fetch__WEBPACK_IMPORTED_MODULE_1__.Request),
+/* harmony export */   "Response": () => (/* reexport safe */ node_fetch__WEBPACK_IMPORTED_MODULE_1__.Response),
+/* harmony export */   "default": () => (/* binding */ localFetch)
+/* harmony export */ });
+/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("bluebird");
+/* harmony import */ var bluebird__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bluebird__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("node-fetch");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./src/config.js");
+
+
+
+(node_fetch__WEBPACK_IMPORTED_MODULE_1___default().Promise) = (bluebird__WEBPACK_IMPORTED_MODULE_0___default());
+node_fetch__WEBPACK_IMPORTED_MODULE_1__.Response.Promise = (bluebird__WEBPACK_IMPORTED_MODULE_0___default());
+
+function localUrl(url) {
+  if (url.startsWith("//")) {
+    return `https:${url}`;
+  }
+
+  if (url.startsWith("http")) {
+    return url;
+  }
+
+  return `http://${_config__WEBPACK_IMPORTED_MODULE_2__.host}${url}`;
+}
+
+function localFetch(url, options) {
+  return node_fetch__WEBPACK_IMPORTED_MODULE_1___default()(localUrl(url), options);
+}
+
+
+
+/***/ }),
+
 /***/ "./src/core/history.js":
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -1837,7 +1952,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var _default = {
   path: "/",
-  children: [(__webpack_require__("./src/routes/home/index.js")["default"]), (__webpack_require__("./src/routes/login/index.js")["default"])],
+  children: [(__webpack_require__("./src/routes/home/index.js")["default"]), (__webpack_require__("./src/routes/login/index.js")["default"]), (__webpack_require__("./src/routes/static/help/index.js")["default"])],
   action: function () {
     var _action = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
       var next, route;
@@ -2030,6 +2145,64 @@ var _default = {
         refer: refer
       }))
     };
+  }
+};
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./src/routes/static/help/index.js":
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__("react"));
+
+var _Layout = _interopRequireDefault(__webpack_require__("./src/components/Layout/Layout.js"));
+
+var _Page = _interopRequireDefault(__webpack_require__("./src/components/Page/index.js"));
+
+var _fetch = _interopRequireDefault(__webpack_require__("./src/core/fetch/fetch.server.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == typeof value && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var _default = {
+  path: "/help",
+  action: function action(_ref) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var locale;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              locale = _ref.locale;
+              return _context.abrupt("return", {
+                title: "Help",
+                description: "Help you to get started",
+                chunk: "help",
+                component: /* @__PURE__ */_react["default"].createElement(_Layout["default"], null, /* @__PURE__ */_react["default"].createElement(_Page["default"], {
+                  html: "<h1>Help</h1>",
+                  title: "Help"
+                }))
+              });
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
   }
 };
 exports["default"] = _default;
@@ -2401,9 +2574,11 @@ var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__("./node_modules/
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }", "",{"version":3,"sources":["webpack://./src/components/variables.css"],"names":[],"mappings":"AAAA;IACI;;iFAE6E;;IAE7E,iEAAiE;;IAEjE;;iFAE6E;;IAE7E,2BAA2B;IAC3B,2BAA2B;;IAE3B;;iFAE6E;;IAE7E,sBAAsB,GAAG,+BAA+B;IACxD,sBAAsB,GAAG,0BAA0B;IACnD,sBAAsB,GAAG,4BAA4B;IACrD,uBAAuB,EAAE,gCAAgC;;IAEzD,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,8BAA8B;IAC9B,4BAA4B;IAC5B,+BAA+B;IAC/B,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;;IAEjC,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,4BAA4B;IAC5B,8BAA8B;IAC9B,+BAA+B;IAC/B,kCAAkC;IAClC,qCAAqC;IACrC,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;EACnC","sourcesContent":[":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }\r\n.footer-footer-TSfRS {\r\n    background-color:black;\r\n    color: red;\r\n    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\r\n}", "",{"version":3,"sources":["webpack://./src/components/variables.css","webpack://./src/components/Footer/footer.css"],"names":[],"mappings":"AAAA;IACI;;iFAE6E;;IAE7E,iEAAiE;;IAEjE;;iFAE6E;;IAE7E,2BAA2B;IAC3B,2BAA2B;;IAE3B;;iFAE6E;;IAE7E,sBAAsB,GAAG,+BAA+B;IACxD,sBAAsB,GAAG,0BAA0B;IACnD,sBAAsB,GAAG,4BAA4B;IACrD,uBAAuB,EAAE,gCAAgC;;IAEzD,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,8BAA8B;IAC9B,4BAA4B;IAC5B,+BAA+B;IAC/B,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;;IAEjC,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,4BAA4B;IAC5B,8BAA8B;IAC9B,+BAA+B;IAC/B,kCAAkC;IAClC,qCAAqC;IACrC,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;EACnC;AC7CF;IACI,sBAAsB;IACtB,UAAU;IACV,qGAAqG;AACzG","sourcesContent":[":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }","@import '../variables.css';\r\n.footer {\r\n    background-color:black;\r\n    color: red;\r\n    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\r\n}"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"footer": "footer-footer-TSfRS"
+};
 module.exports = ___CSS_LOADER_EXPORT___;
 
 
@@ -2490,6 +2665,25 @@ ___CSS_LOADER_EXPORT___.locals = {
 	"iconPosition": "Login-iconPosition-UIeGF",
 	"backgroundOne": "Login-backgroundOne-fpOFU",
 	"backgroundTwo": "Login-backgroundTwo-s9CDW"
+};
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Page/Page.css":
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// Imports
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/sourceMaps.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }\r\n.Page-root-q_n_Z {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n.Page-container-uko9c {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: 1080px;\r\n  max-width: var(--max-content-width);\r\n}", "",{"version":3,"sources":["webpack://./src/components/variables.css","webpack://./src/components/Page/Page.css"],"names":[],"mappings":"AAAA;IACI;;iFAE6E;;IAE7E,iEAAiE;;IAEjE;;iFAE6E;;IAE7E,2BAA2B;IAC3B,2BAA2B;;IAE3B;;iFAE6E;;IAE7E,sBAAsB,GAAG,+BAA+B;IACxD,sBAAsB,GAAG,0BAA0B;IACnD,sBAAsB,GAAG,4BAA4B;IACrD,uBAAuB,EAAE,gCAAgC;;IAEzD,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,8BAA8B;IAC9B,4BAA4B;IAC5B,+BAA+B;IAC/B,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;;IAEjC,uBAAuB;IACvB,2BAA2B;IAC3B,oBAAoB;IACpB,yBAAyB;IACzB,4BAA4B;IAC5B,8BAA8B;IAC9B,+BAA+B;IAC/B,kCAAkC;IAClC,qCAAqC;IACrC,2BAA2B;IAC3B,8BAA8B;IAC9B,iCAAiC;EACnC;AC7CF;EACE,kBAAkB;EAClB,mBAAmB;AACrB;AACA;EACE,cAAc;EACd,iBAAiB;EACjB,iBAAmC;EAAnC,mCAAmC;AACrC","sourcesContent":[":root {\r\n    /*\r\n     * Typography\r\n     * ======================================================================== */\r\n  \r\n    --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n  \r\n    /*\r\n     * Layout\r\n     * ======================================================================== */\r\n  \r\n    --max-content-width: 1080px;\r\n    --max-container-width: 100%;\r\n  \r\n    /*\r\n     * Media queries breakpoints\r\n     * ======================================================================== */\r\n  \r\n    --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n    --screen-sm-min: 768px;  /* Small screen / tablet */\r\n    --screen-md-min: 992px;  /* Medium screen / desktop */\r\n    --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  \r\n    --border-color: #dce0e0;\r\n    --background-color: #ffffff;\r\n    --btn-color: #484848;\r\n    --btn-primary-bg: #090B1E;\r\n    --btn-primary-color: #ffffff;\r\n    --btn-primary-bg-hover:#090B1E;\r\n    --btn-primaryBorder-bg: #ffffff;\r\n    --btn-primaryBorder-color: #090B1E;\r\n    --btn-primaryBorder-hover-bg: #090B1E;\r\n    --btn-secondary-bg: #090B1E;\r\n    --btn-secondary-color: #ffffff;\r\n    --btn-secondary-hover-bg: #090B1E;\r\n  }","@import '../variables.css';\r\n.root {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n.container {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: var(--max-content-width);\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"root": "Page-root-q_n_Z",
+	"container": "Page-container-uko9c"
 };
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -2809,6 +3003,28 @@ module.exports = function (item) {
 
 /***/ }),
 
+/***/ "./src/components/Page/Page.css":
+/***/ ((module, exports, __webpack_require__) => {
+
+
+    var refs = 0;
+    var css = __webpack_require__("./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/components/Page/Page.css");
+    var insertCss = __webpack_require__("./node_modules/isomorphic-style-loader/insertCss.js");
+    var content = typeof css === 'string' ? [[module.id, css, '']] : css;
+
+    exports = module.exports = css.locals || {};
+    exports._getContent = function() { return content; };
+    exports._getCss = function() { return '' + css; };
+    exports._insertCss = function(options) { return insertCss(content, options) };
+
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (false) { var removeCss; }
+  
+
+/***/ }),
+
 /***/ "./src/components/common.css":
 /***/ ((module, exports, __webpack_require__) => {
 
@@ -3024,6 +3240,14 @@ module.exports = require("bcrypt");
 
 /***/ }),
 
+/***/ "bluebird":
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("bluebird");
+
+/***/ }),
+
 /***/ "body-parser":
 /***/ ((module) => {
 
@@ -3157,6 +3381,14 @@ module.exports = require("jsonwebtoken");
 
 "use strict";
 module.exports = require("lodash");
+
+/***/ }),
+
+/***/ "node-fetch":
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node-fetch");
 
 /***/ }),
 
